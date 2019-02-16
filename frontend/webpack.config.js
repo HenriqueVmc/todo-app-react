@@ -1,4 +1,4 @@
-const Webpack = require('webpack')
+const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
@@ -9,10 +9,10 @@ module.exports = {
     },
     devServer: {
         port: 8080,
-        contentBase: './public',        
+        contentBase: './public',
     },
     resolve: {
-        extensions:['','js','.jsx'],
+        extensions: ['', '.js', '.jsx'],
         alias: {
             //Dando apelido a pasta node_modules. Ex.: modules/bibliotecas
             modules: __dirname + '/node_modules'
@@ -26,7 +26,7 @@ module.exports = {
         loaders: [{
             test: /.js[x]?$/, //js e jsx vão ser interpretados no parser
             loader: 'babel-loader',
-            exclude: '/node_modules/', // irá ignorar
+            exclude: /node_modules/, //irá ignorar pasta
             query: {
                 presets: ['es2015', 'react'],
                 plugins: ['transform-object-rest-spread']
@@ -34,7 +34,7 @@ module.exports = {
         },
         {
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract('style.loader', 'css-loader')
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
         },
         {
             test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
