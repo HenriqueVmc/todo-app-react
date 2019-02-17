@@ -6,9 +6,9 @@ import React from 'react'
 import Routes from './routes'
 import Menu from '../template/menu'
 
-export default props => (
-    <div className='container'>
-        <Menu />
-        <Routes />
-    </div>
-)
+export default props => {
+    
+    if(props.section === "header") return(<Menu />)
+
+    else if(props.section == "content") return (<Routes />)
+}

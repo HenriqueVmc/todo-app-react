@@ -4,4 +4,5 @@ import ReactDOM from 'react-dom'
 import App from './main/app'
 
 //Renderizando componente de App no elemento cujo id é 'app' -> (public/index.html) 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App section="header" />, document.getElementById('header'))
+ReactDOM.render(<App section="content" />, document.getElementById('content'))

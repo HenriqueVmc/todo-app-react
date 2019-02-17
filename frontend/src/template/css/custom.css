@@ -14,3 +14,7 @@
 .todoForm{
     padding-bottom: 60px;
 }
+
+#header nav{
+    border-radius: 0px;
+}

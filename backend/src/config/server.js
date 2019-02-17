@@ -10,6 +10,7 @@ const allowCors = require('./cors')
 // responsável por tratar as requisições com envio de formulario.
 server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
+
 server.use(allowCors)
 
 // Registrando a porta declarada
